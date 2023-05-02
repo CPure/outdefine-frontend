@@ -1,10 +1,10 @@
-import { api } from '../axios'
+import { api } from '../axios';
 
 
 export const getSpellcheck = async (word) => {
-  const response = await api.get(`/api/spellcheck/${word}`)
+  const response = await api.get(`/api/spellcheck/${word}`);
 
-  return response.data
+  return response.data;
 }
 
 export default {
