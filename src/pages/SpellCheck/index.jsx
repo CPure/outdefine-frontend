@@ -26,7 +26,7 @@ const SpellCheckForm = () => {
   };
 
   return (
-    <div>
+    <div data-testid="spell-check-form">
       <form onSubmit={handleSubmit}>
         <label htmlFor="word">Word:</label>
         <input type="text" id="word" value={word} onChange={(e) => setWord(e.target.value)} />
