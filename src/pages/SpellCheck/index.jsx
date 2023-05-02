@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import SpellcheckService from './services/spellcheck'
+import SpellcheckService from '../../services/spellcheck'
 
-function SpellCheckForm() {
+const SpellCheckForm = () => {
   const [word, setWord] = useState('');
   const [suggestions, setSuggestions] = useState([]);
   const [correct, setCorrect] = useState(null);
@@ -10,7 +10,6 @@ function SpellCheckForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Send a request to the API to check the spelling of the word
     try{
         const response = await SpellcheckService.getSpellcheck(word);
         setIsFound(true);

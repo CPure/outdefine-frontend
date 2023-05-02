@@ -1,5 +1,5 @@
 import './App.css';
-import SpellCheckForm from './SpellCheckForm'
+import SpellCheckForm from './pages/SpellCheck'
 function App() {
   return (
     <div className="App">
