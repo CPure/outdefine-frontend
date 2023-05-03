@@ -10,6 +10,10 @@ const SpellCheckForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (word.trim() === '') {
+      alert('Please enter a word.');
+      return;
+    }
     try {
       const response = await SpellcheckService.getSpellcheck(word);
       setIsFound(true);
